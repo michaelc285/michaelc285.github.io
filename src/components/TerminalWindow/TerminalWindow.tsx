@@ -1,10 +1,12 @@
 import React, { ReactElement } from 'react'
-import { MutableRefObject, useEffect, useRef } from 'react';
+import { useEffect, useRef } from 'react';
 import styled from '@emotion/styled'
 import Typed, { TypedOptions } from "typed.js"
 
 const Conatiner = styled.div`
-  min-width: 550px;
+  width: 100%;
+  min-width: 300px;
+  max-width: 550px;
   box-shadow: 1px -2px 6px 4px rgba(212,202,119,0.19);
   border-radius: 10px;
 `
@@ -27,6 +29,7 @@ const MainScreen = styled.div`
   min-height: 200px;
   color: #ffffff;
   display: flex;
+  font-family: 'Roboto Mono', monospace;
 `
 
 const DollarSign = styled.span`
@@ -66,13 +69,13 @@ export function TerminalWindow(): ReactElement {
   useEffect(() => {
     const options: TypedOptions = {
       strings: [
-        'HI, MY NAME IS MICHAEL CHENG ^500',
-        'I\'M A SOFTWARE ENGINEER',
+        'HI, MY NAME IS MICHAEL ^500',
+        'I\'M A SOFTWARE ENGINEER'
       ],
-      cursorChar: '_',
-      typeSpeed: 40,
+      typeSpeed: 80,
       backSpeed: 20,
-      loop: true
+      loop: true,
+      cursorChar: '_'
     };
 
     typed.current = new Typed(element.current, options);

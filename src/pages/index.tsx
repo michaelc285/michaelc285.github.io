@@ -5,15 +5,15 @@ import { TerminalWindow } from "../components";
 const Main = styled.main`
   height: 100vh;
   color: #c2baba;
-  font-size: 1.5rem;
-  background: #1f201f;
-  font-family: 'Roboto Mono', monospace;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 `;
 
 const Container = styled.div`
+  width: 100%;
+  height: 100%;
+  padding: 0px 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `
 
 const IndexPage = () => {
